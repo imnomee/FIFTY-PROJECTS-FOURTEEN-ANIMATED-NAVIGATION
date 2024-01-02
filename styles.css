@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Roboto:wght@400;700&display=swap');
 
+:root {
+    --transition: all 1s;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -33,7 +36,7 @@ nav {
     justify-content: center;
     border-radius: 3px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: all 0.6s;
+    transition: var(--transition);
 }
 
 nav.active {
@@ -44,7 +47,7 @@ nav ul {
     display: flex;
     list-style-type: none;
     width: 0;
-    transition: all 0.6s;
+    transition: var(--transition);
 }
 nav.active ul {
     width: 100%;
@@ -53,7 +56,7 @@ nav.active ul {
 nav ul li {
     transform: rotateY(0deg);
     opacity: 0;
-    transition: all 0.6s;
+    transition: var(--transition);
 }
 nav.active ul li {
     opacity: 1;
@@ -65,6 +68,7 @@ nav ul li a {
     color: #000;
     text-decoration: none;
     margin: 0 10px;
+    font-weight: bold;
 }
 
 .icon {
@@ -84,7 +88,7 @@ nav ul li a {
     position: absolute;
     top: 10px;
     left: 5px;
-    transition: all 0.6s;
+    transition: var(--transition);
 }
 .icon .line2 {
     top: auto;
